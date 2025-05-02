@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #08A6E4;
+    --color-primary-shadow: rgba(7, 172, 230, .16);
+    --color-redish: rgb(251, 59, 100);
+    --color-green: #55DFB4;
+    --color-black: #000000;
+    --color-gray: #A5A5A5;
+    --color-light-gray: #F7F7F7;
+    --color-white: #FFFFFF;
+
+}
+
+.raleway {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+.raleway300 {
+    font-weight: 300;
+}  
+
+.raleway400 {
+    font-weight: 400;
+}  
+
+.raleway700 {
+    font-weight: 700;
+} 
+
+.raleway800 {
+    font-weight: 800;
+} 
+
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+.open-sans300 {
+    font-weight: 300;
+}
+
+.open-sans400 {
+    font-weight: 400;
+}
+
+.open-sans700 {
+    font-weight: 700;
+}
+
+.container {
+    width: 1352px;
+    display: flex;
+    box-sizing: border-box;
+}
