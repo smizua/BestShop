@@ -12,54 +12,25 @@
     --color-gray: #A5A5A5;
     --color-light-gray: #F7F7F7;
     --color-white: #FFFFFF;
+    --button-radius: 35px;
+    --font-raleway: "Raleway", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
 
 }
 
-.raleway {
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-  }
-
-.raleway300 {
-    font-weight: 300;
-}  
-
-.raleway400 {
-    font-weight: 400;
-}  
-
-.raleway700 {
-    font-weight: 700;
-} 
-
-.raleway800 {
-    font-weight: 800;
-} 
-
-
-.open-sans {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  }
-
-.open-sans300 {
-    font-weight: 300;
+* {
+    box-sizing: border-box;
 }
 
-.open-sans400 {
-    font-weight: 400;
+body {
+    font-family: var(--font-open-sans);
 }
 
-.open-sans700 {
-    font-weight: 700;
+a {
+    text-decoration: none;
 }
 
 .container {
     width: 1352px;
-    display: flex;
-    box-sizing: border-box;
+    margin: 0 auto;
 }
