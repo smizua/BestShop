@@ -12,10 +12,12 @@
     --color-gray: #A5A5A5;
     --color-light-gray: #F7F7F7;
     --color-white: #FFFFFF;
-    --cont-width: 1352px;
-
+    --font-raleway: "Raleway", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --button-radius: 35px;
 }
 
+/* PÍSMA, JE NUTNÉ JE TU MÍT?
 .raleway {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
@@ -38,7 +40,6 @@
     font-weight: 800;
 } 
 
-
 .open-sans {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -58,17 +59,26 @@
 .open-sans700 {
     font-weight: 700;
 }
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-open-sans);
+}
+
+a {
+    text-decoration: none;
+}
 
 .container {
-    width: var(--cont-width);
-    box-sizing: border-box;
-    margin: 0, auto;
+    width: 1352px;
+    margin: 0 auto;
 }
 
-p {
-    font-family: "Open sans";
-    line-height: 2em;
-}
+
 .logo {
     color: var(--color-primary);
     font-family: "Raleway";
@@ -115,14 +125,15 @@ h1 {
     padding: 2em 0 1em 0;
 }
 
-h2, h3 {
-    font-family: "Raleway";
+h2 {
+    font-family: var(--font-raleway);
+    font-size: 2em;
+    text-align: center;
 }
 
-h2 {
-    font-size: 2em;
+
     
-}
+
 
 .btn {
     border-radius: 30px;
@@ -137,30 +148,30 @@ h2 {
 }
 
 .statistics {
-    text-align: center;
     background-color: var(--color-white);
     padding: 3em 0;
-        
 }
 
-.statistics-text {
+.statistics__container {
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    margin: 3em, auto;
-    gap: 50px;
-    
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 100px auto 120px;     
 }
 
-.statistics-text article {
-    width: 150px;
+.statistics__single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 160px;
 }
 
 .circle {
     width: 3em;
     height: 3em;
     border-radius: 50%;
+    position: relative;
 }
 
 .red {
@@ -175,68 +186,71 @@ h2 {
     background-color: var(--color-green);
 }
 
-.icon {
-    display: flex;
-    justify-content: center;
+.circle img {
+    position: absolute;
+    top: 0;
+    left: 50%;
 }
+
+.bold-nmb {
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.gray-small {
+    color: var(--color-gray);
+    margin-top: 15px;
+}
+
 
 .benefits {
     background-color: var(--color-light-gray);
     padding: 5em;
-        
 }
-.container .benefit {
-    justify-content: center;
-}
-.benefit {
+
+.benefits__container {
     display: flex;
-    background-color: var(--color-white);
-    margin: 2em;
-    border-radius: 5px;
-    width: 1000px;   
-    padding: 10px; 
-    border: 1px solid var(--color-gray);
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1000px;
+    gap: 50px;
     
 }
-.image img {
-    height: 10em;
-        
+
+.benefit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* flex-grow: 1;
+    gap: 20px;
+    max-height: 300px; */
 }
+
 .image {
     width: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
 
+.image img {
+    max-width: 300px;
+    align-items: center;
+}
+
+.text h2 {
+    text-align: left;
 }
 
 .text {
-    width: 50%;
-    padding: 20px;
-}
-
-.reverse {
-    flex-direction: row-reverse;
-}
-
-.benefit-gap {
     display: flex;
-    width: 1000px;
-    gap: 20px;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
 }
-
-.benefit-gap .text {
-    background-color: var(--color-white);
-    margin: 0 2em;
-    border-radius: 5px;
-}
-div.image.green {
-    width: 30%;
-    border-radius: 5px;
-}
-
-
 
 
 .footer {
@@ -244,4 +258,33 @@ div.image.green {
     justify-content: space-between;
 }
 
+.first, .second {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 5px;
+}
 
+.second {
+    flex-direction: row-reverse;
+}
+
+.third .text {
+    background-color: var(--color-white);
+    padding: 30px;
+}
+
+
+.pricing__container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center ;
+    
+    
+}
+
+.pricing__single {
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid black;
+    position: relative;
+}
