@@ -1,0 +1,132 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//základ společný pro vše
+
+body {
+  font-family: var(--font-open-sans);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+//header
+.header {
+  height: 70px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: $font-raleway;
+  color: $color-primary;
+}
+
+.header__nav {
+  display: contents;
+  &:hover {
+    display: block;
+  }
+}
+
+.nav__link {
+  padding: 28px 18px 22px;
+  text-transform: uppercase;
+  color: $color-gray;
+  font-weight: 700;
+  font-size: 0.6875rem;
+  border-bottom: 4px solid transparent;
+}
+
+.nav__element {
+  padding: 0 26px;
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+//zobrazení pc
+@media (min-width: 640px) {
+  .container {
+    width: 1352px;
+    margin: 0 auto;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__link {
+    padding: 28px 18px 22px;
+    text-transform: uppercase;
+    color: $color-gray;
+    font-weight: 700;
+    font-size: 0.6875rem;
+    border-bottom: 4px solid transparent;
+    &:hover {
+      border-color: $color-primary;
+      color: $color-black;
+    }
+  }
+}
+
+//opening section
+.opening {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.opening__header {
+  font-family: $font-raleway;
+  margin-top: 100px;
+  font-size: 3.0625rem; /* 49px (from the design) / 16 (basic size) = 3.0625 */
+}
+
+.opening__heading {
+  margin-top: 20px;
+  margin-bottom: 38px;
+}
+
+.opening__image {
+  width: 100%;
+  height: auto;
+}
+
+.btn {
+  color: $color-white;
+  border-radius: $button-radius;
+  font-weight: bold;
+  padding: 16px 65px;
+  border: none;
+  display: inline-block;
+}
+.btn--primary {
+  background-color: $color-primary;
+  box-shadow: 3px 10px 14px $color-primary-shadow;
+}
+
+.btn--large {
+  padding: 22px 90px;
+}
